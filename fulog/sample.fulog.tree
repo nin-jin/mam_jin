@@ -1,0 +1,132 @@
+\+ True
+\- False
+\? Unknown
+\! Absurd
+
+True +
+False -
+Unknown + Unknown
+Absurd - Absurd
+
+\ ( A => B ) & ( ~B )=> ~A
+modus-tolens
+	- @A
+	/ - @B
+	/
+		+ @B
+		/ + @A
+
+Animal \set
+mortal \relation
+item-of \@sub item-of @super
+transit-on \@property transit-on @relation
+is-property \predicate
+is-relation \predicate
+
+humanity
+	+ Human item-of Animal
+
+mortality
+	+ is-property mortal
+	+ mortal Animal
+	+ mortal transit-on item-of
+
+sets
+	+ is-relation item-of
+
+property-transition
+	+ @property @target
+	/ + @property @source
+	/ + @target @relation @source
+	/ + @property transit-on @relation
+
+\ask universe
+is-human-mortal
+	? mortal Human
+
+
+modus-ponens
+	+ @cons
+	/ + @cause
+	/
+		+ @cons
+		/ + @cause
+
+modus-tolens
+	- @cause
+	/ - @cons
+	/
+		+ @cons
+		/ + @cause
+
+
+xxx
+	+ A
+	/ + C
+
+yyy
+	- A
+	/ + B
+
+zzz
+	+ B
+	/ + C
+	/ + D
+
+
+ooo - D
+
+
+
+diversion
+	+
+		- @B
+		/ + @C
+	+
+		- @C
+		/ + @B
+	/
+		+ @A
+		/ + @B
+	/
+		- @A
+		/ + @C
+
+
+\Agata Kristi
+suspection
+	+
+		killer A
+		killer B
+		killer C
+		killer D
+alibi
+	- killer A
+	- killer B
+	- killer C
+result
+	+ killer D
+
+
+\Incompatibe
+diversion
+	+ @some
+	- @some
+
+
+
+
+
+dracula_isnt_human
+	- Dracula is Human
+man_is_human
+	+ @man is Human
+	/ + @man is Man
+modus-tolens
+	- @cause
+	/
+		+ @cons
+		/ + @cause
+	/ - @cons
+is_dracula_man
+	? Dracula is Man

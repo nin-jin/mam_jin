@@ -1,0 +1,11 @@
+fulog kind
+	[: @ variable \free variable
+	[] / operator \implication
+	[] + operator \declaration of truth
+	[] - operator \declaration of falsy
+	[] ? operator \query of proof
+	[] $ operator \explanation
+	[] \
+		string \remark
+	[: \
+		enum \declared name
