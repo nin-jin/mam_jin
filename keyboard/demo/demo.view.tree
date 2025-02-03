@@ -1,0 +1,7 @@
+$jin_keyboard_demo $mol_example_small
+	title \Small onn screen keyboard
+	sub /
+		<= Content $mol_list rows /
+			<= Area $mol_string
+			<= keyboard $jin_keyboard
+				area <= Area
