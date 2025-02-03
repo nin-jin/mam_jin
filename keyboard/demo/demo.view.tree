@@ -5,3 +5,10 @@ $jin_keyboard_demo $mol_example_small
 			<= Area $mol_string
 			<= keyboard $jin_keyboard
 				area <= Area
+	tags /
+		\keyboard
+		\touch
+		\screen
+	aspects /
+		\Widget/Control
+
