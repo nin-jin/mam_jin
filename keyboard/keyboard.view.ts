@@ -79,6 +79,14 @@ namespace $.$$ {
 					val = ''
 					break
 				
+				case '↩':
+					$mol_dom.document.execCommand( 'undo' )
+					return
+				
+				case '↪':
+					$mol_dom.document.execCommand( 'redo' )
+					return
+				
 			}
 			
 			if( !this.upcase() ) val = val.toLowerCase()
